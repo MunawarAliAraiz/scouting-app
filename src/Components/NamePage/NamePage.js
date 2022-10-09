@@ -1,8 +1,9 @@
 import React from 'react';
 import Navbar from '../Navbar';
 import SeacrhBar from './SearchBar';
-import DescriptionCard from './DescriptionCard';
+import PerformanceCard from './PerformanceCard';
 import Cards from '../Cards';
+import ReactableCard from '../ReactableCard';
 
 export default function NamePage() {
 
@@ -10,8 +11,9 @@ export default function NamePage() {
     <>
     <Navbar/>
     <SeacrhBar/>
-    <DescriptionCard/>
+    <PerformanceCard/>
     <Cards/>
+    <ReactableCard/>
     </>
   );
 }

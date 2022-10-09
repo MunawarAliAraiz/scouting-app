@@ -32,43 +32,43 @@ export default function Navbar() {
           <MDBCollapse navbar show={showBasic}>
             <MDBNavbarNav className="mb-2 mb-lg-0">
                 <Link className="link-btn py-2 mx-0 my-0 px-4" to="/" role={"button"}>
-                    <MDBNavbarItem className="">
+                    <MDBNavbarItem>
                         Name
                     </MDBNavbarItem>
                 </Link>
-                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/" role={"button"}>
-                    <MDBNavbarItem className="">
+                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/metricPage" role={"button"}>
+                    <MDBNavbarItem>
                         Metric
                     </MDBNavbarItem>
                 </Link>
-                <Link className="link-btn py-2 mx-0 my-0  px-4" to="/" role={"button"}>
-                    <MDBNavbarItem className="">
+                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/" role={"button"}>
+                    <MDBNavbarItem>
                         Create Team
                     </MDBNavbarItem>
                 </Link>
-                <Link className="link-btn py-2 mx-0 my-0  px-4" to="/" role={"button"}>
-                    <MDBNavbarItem className="">
+                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/" role={"button"}>
+                    <MDBNavbarItem>
                         Player Market
                     </MDBNavbarItem>
                 </Link>
-                <Link className="link-btn py-2 mx-0 my-0   my-0 px-4" to="/" role={"button"}>
-                    <MDBNavbarItem className="">
+                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/" role={"button"}>
+                    <MDBNavbarItem>
                         Player Comparison
                     </MDBNavbarItem>
                 </Link>
-                <Link className="link-btn py-2 mx-0 my-0  px-4" to="/" role={"button"}>
-                    <MDBNavbarItem className="">
+                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/" role={"button"}>
+                    <MDBNavbarItem>
                         Similar Player
                     </MDBNavbarItem>
                 </Link>
-                <Link className="link-btn py-2 mx-0 my-0  px-4" to="/" role={"button"}>
-                    <MDBNavbarItem className="">
+                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/" role={"button"}>
+                    <MDBNavbarItem>
                         GK Search
                     </MDBNavbarItem>
                 </Link>
-                <Link className="link-btn py-2 mx-0 my-0  px-4" to="/" role={"button"}>
-                    <MDBNavbarItem className="">
-                        How to Guide
+                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/" role={"button"}>
+                    <MDBNavbarItem>
+                        Guide
                     </MDBNavbarItem>
                 </Link>
             </MDBNavbarNav>

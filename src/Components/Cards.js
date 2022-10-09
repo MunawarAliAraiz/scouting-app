@@ -2,25 +2,38 @@ import React from "react";
 import { MDBCard, MDBCardBody, MDBRow, MDBCol } from "mdb-react-ui-kit";
 import "./Navbar.css";
 import Tabs from "./NamePage/Tabs";
+import SeacrhBar from "./NamePage/SearchBar";
+import ProfileFieldPlotTable from "./NamePage/ProfileFieldPlotTable";
 
 export default function Cards() {
+  let arr1 = ['Profile', 'Position'];
+  let arr2 = ['Model', 'Style', 'Contribution'];
+  let arr3 = ['Duel Rating', 'Finishing/Saving'];
+  let elements1 = [<ProfileFieldPlotTable/>,<SeacrhBar/>]
+  let elements2 = [<SeacrhBar/>,<ProfileFieldPlotTable/>, <h3>I am 3rd</h3>]
+  let style = 'end'
+  
   return (
     <MDBRow className="mt-3 g-4">
-      <MDBCol md="12" xl="4">
+      <MDBCol md="12" xxl="4">
         <MDBCard>
-          <MDBCardBody className="border-radius cardHeight">
-            <Tabs/>
+          <MDBCardBody className="border-radius cardHeight py-0 px-0">
+            <Tabs id="ProfileFieldPlot" data={arr1} content={elements1} align={style}/>
           </MDBCardBody>
         </MDBCard>
       </MDBCol>
-      <MDBCol md="12" xl="4">
+      <MDBCol md="12" xxl="4">
         <MDBCard>
-          <MDBCardBody className="border-radius cardHeight"></MDBCardBody>
+          <MDBCardBody className="border-radius cardHeight py-0 px-0">
+            <Tabs id="PolarPlot" data={arr2} content={elements1} align={style}/> 
+          </MDBCardBody>
         </MDBCard>
       </MDBCol>
-      <MDBCol md="12" xl="4">
+      <MDBCol md="12" xxl="4">
         <MDBCard>
-          <MDBCardBody className="border-radius cardHeight"></MDBCardBody>
+          <MDBCardBody className="border-radius cardHeight py-0 px-0">
+            <Tabs id="PolarBarChart" data={arr3} content={elements2} align={style}/>
+          </MDBCardBody>
         </MDBCard>
       </MDBCol>
     </MDBRow>

@@ -7,7 +7,7 @@ import {
 } from 'mdb-react-ui-kit';
 import "../Navbar.css";
 
-export default function DescriptionCard() {
+export default function PerformanceCard() {
   return (
     <MDBCard>
       <MDBCardBody className="back-color border-radius">

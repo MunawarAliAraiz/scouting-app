@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   MDBTabs,
   MDBTabsItem,
-  MDBTabsLink,
   MDBTabsContent,
-  MDBTabsPane
-} from 'mdb-react-ui-kit';
+  MDBTabsPane,
+} from "mdb-react-ui-kit";
 
-export default function Tabs() {
-  const [basicActive, setBasicActive] = useState('tab1');
+export default function Tabs(props) {
+  const [basicActive, setBasicActive] = useState("tab1");
 
   const handleBasicClick = (value) => {
     if (value === basicActive) {
@@ -18,30 +17,38 @@ export default function Tabs() {
     setBasicActive(value);
   };
 
+  const addClass = (event,cls) => {
+      let elements = document.getElementsByClassName(cls);
+      for (let i=0;i<elements.length;i++)
+      {
+        elements[i].classList.remove('act');
+      }
+      event.target.classList.add('act');
+  };
+
+
   return (
     <>
-      <MDBTabs className='mb-3 justify-content-end'>
-        <MDBTabsItem>
-          <MDBTabsLink onClick={() => handleBasicClick('tab1')} active={basicActive === 'tab1'}>
-            Tab 1
-          </MDBTabsLink>
-        </MDBTabsItem>
-        <MDBTabsItem>
-          <MDBTabsLink onClick={() => handleBasicClick('tab2')} active={basicActive === 'tab2'}>
-            Tab 2
-          </MDBTabsLink>
-        </MDBTabsItem>
-        <MDBTabsItem>
-          <MDBTabsLink onClick={() => handleBasicClick('tab3')} active={basicActive === 'tab3'}>
-            Tab 3
-          </MDBTabsLink>
-        </MDBTabsItem>
+      <MDBTabs className={`mb-3 justify-content-${props.align}`}>
+        {props.data.map((item, index) => (
+          <MDBTabsItem>
+            <button
+              className= {index === 0 ? `${props.id} p-2 px-3 fs-5 act` : `${props.id} p-2 px-3 fs-5` }
+              onClick={(e) =>  {handleBasicClick(`tab${index + 1}`); addClass(e,props.id)}}
+              active={basicActive === `tab${index}`}
+            >
+              {item}
+            </button>
+          </MDBTabsItem>
+        ))}
       </MDBTabs>
 
       <MDBTabsContent>
-        <MDBTabsPane show={basicActive === 'tab1'}>Tab 1 content</MDBTabsPane>
-        <MDBTabsPane show={basicActive === 'tab2'}>Tab 2 content</MDBTabsPane>
-        <MDBTabsPane show={basicActive === 'tab3'}>Tab 3 content</MDBTabsPane>
+        {props.data.map((item, index) => (
+          <MDBTabsPane show={basicActive === `tab${index + 1}`}>
+            <>{props.content[index]}</>
+          </MDBTabsPane>
+        ))}
       </MDBTabsContent>
     </>
   );

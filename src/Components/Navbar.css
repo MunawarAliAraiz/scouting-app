@@ -2,6 +2,23 @@
     background-color: #33485D;
     color: white;
 }
+
+.act{
+    background-color: #1ABB9C !important;
+    color: white !important;
+}
+
+.navLink:hover{
+    color: rgb(139, 138, 138) !important;
+}
+
+.ProfileFieldPlot,.PolarPlot,.PolarBarChart,.rtTable{
+    background-color: #33485D;
+    color: white !important;
+    border: none !important;
+    border-radius: 5px 5px 0px 0px;
+}
+
 .link-btn{
     color:white;
     margin:auto;
@@ -14,10 +31,10 @@
     color: white;
 }
 
-.link-btn:focus{
+/* .link-btn:focus{
     background-color: #1ABB9C;
     color: white;
-}
+} */
 
 .border-radius{
     border-radius: 10px;
@@ -42,5 +59,54 @@
     box-sizing: border-box;
     box-shadow: black 2px 2px 10px;
     border-radius: 0.25rem;
-    min-height: 30rem;
+    min-height: 34.5rem;
 }
+
+.box-shadow{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    background-clip: border-box;
+    box-sizing: border-box;
+    box-shadow: black 2px 2px 10px;
+    border-radius: 0.25rem;
+}
+
+.rt-widthTeam{
+    flex: 250 0 auto;
+    min-width: 250px;
+}
+
+.rt-widthTeamMinutes{
+    flex: 75 0 auto;
+    min-width: 75px;
+}
+
+.rt-widthTeamBorder{
+    flex: 75 0 auto;
+    min-width: 75px;
+    border-left: 1px solid black;
+}
+
+.suggestionDiv{
+    cursor: pointer;
+    border-radius: 5px;
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+.suggestion:hover{
+    background-color: rgba(161, 160, 160, 0.546);
+}
+
+.MuiDataGrid-footerContainer,.MuiTablePagination-toolbar,.MuiTablePagination-displayedRows,.MuiTablePagination-actions,.MuiIconButton-root.Mui-disabled{
+    font-size: 1.5rem !important;
+    size:1rem;
+    color: black !important;
+}
+
+/* .css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar{
+    font-size: 2rem;
+} */
