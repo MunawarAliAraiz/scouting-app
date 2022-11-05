@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+import "./Custom.css";
 
 import {
   MDBContainer,
@@ -51,7 +51,7 @@ export default function Navbar() {
                         Player Market
                     </MDBNavbarItem>
                 </Link>
-                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/" role={"button"}>
+                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/playerComparisonPage" role={"button"}>
                     <MDBNavbarItem>
                         Player Comparison
                     </MDBNavbarItem>

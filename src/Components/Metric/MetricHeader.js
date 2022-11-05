@@ -5,7 +5,8 @@ import {
   MDBRow,
   MDBCol,
 } from 'mdb-react-ui-kit';
-import "../Navbar.css";
+import "../Custom.css";
+import RangeSlider from './RangeSlider';
 
 export default function MetricHeader() {
   return (
@@ -32,16 +33,16 @@ export default function MetricHeader() {
           </MDBCol>
           <MDBCol sm="12" md="4" lg="2">
             <div className="text-uppercase text-center fw-bold fs-4 pb-0">Season</div>
-            <div className="fs-5 text-center">170 cm</div>
+            <div className="fs-5 text-center"><RangeSlider value={[17,35]}/></div>
             
           </MDBCol>
           <MDBCol sm="12" md="4" lg="2">
             <div className="text-uppercase text-center fw-bold fs-4 pb-0">Age</div>
-            <div className="fs-5 text-center">72</div>
+            <div className="fs-5 text-center"><RangeSlider value={[16,22]}/></div>
           </MDBCol>
           <MDBCol sm="12" md="4" lg="2">
             <div className="text-uppercase text-center fw-bold fs-4 pb-0">Minutes</div>
-            <div className="fs-5 text-center">72</div>
+            <div className="fs-5 text-center"><RangeSlider value={50}/></div>
           </MDBCol>
         </MDBRow>
       </MDBCardBody>

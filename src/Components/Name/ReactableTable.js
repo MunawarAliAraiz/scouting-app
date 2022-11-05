@@ -1,6 +1,6 @@
 import React from 'react';
 import { MDBTable, MDBTableHead, MDBTableBody } from 'mdb-react-ui-kit';
-import '../Navbar.css';
+import '../Custom.css';
 import Api from '../Api';
 
 export default function ReactableTable() {

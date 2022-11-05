@@ -1,7 +1,6 @@
 import { DataGrid } from '@mui/x-data-grid';
 import { useState} from 'react';
 import { MDBBtn} from "mdb-react-ui-kit";
-import Api from '../Api';
 
 const columns = [
   { field: 'name', headerName: 'Player', width: 200},
@@ -169,7 +168,6 @@ const rows = [
       passpct3: 0
     }
 ];
-console.log(Api);
 
 export default function MetricTable() {
 

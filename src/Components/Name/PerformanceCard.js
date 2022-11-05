@@ -5,7 +5,7 @@ import {
   MDBRow,
   MDBCol,
 } from 'mdb-react-ui-kit';
-import "../Navbar.css";
+import "../Custom.css";
 
 export default function PerformanceCard() {
   return (

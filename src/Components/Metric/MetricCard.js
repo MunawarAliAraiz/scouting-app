@@ -1,6 +1,6 @@
 import React from "react";
 import { MDBCard, MDBCardBody, MDBRow, MDBCol, MDBIcon} from "mdb-react-ui-kit";
-import "../Navbar.css";
+import "../Custom.css";
 import Checkbox from '@mui/material/Checkbox';
 import DiscreteSlider from "./Slider";
 

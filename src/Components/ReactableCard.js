@@ -1,9 +1,9 @@
 import React from "react";
 import { MDBCard, MDBCardBody, MDBRow, MDBCol } from "mdb-react-ui-kit";
-import "./Navbar.css";
-import Tabs from "./NamePage/Tabs";
-import SeacrhBar from "./NamePage/SearchBar";
-import ReactableTable from "./NamePage/ReactableTable";
+import "./Custom.css";
+import Tabs from "./Name/Tabs";
+import SeacrhBar from "./Name/SearchBar";
+import ReactableTable from "./Name/ReactableTable";
 
 export default function ReactableCard() {
   let arr = ['Model', 'Style'];
