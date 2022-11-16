@@ -1,9 +1,9 @@
 import React from "react";
 import { MDBCard, MDBCardBody, MDBRow, MDBCol } from "mdb-react-ui-kit";
 import "./Custom.css";
-import Tabs from "./Name/Tabs";
-import SeacrhBar from "./Name/SearchBar";
-import ProfileFieldPlotTable from "./Name/ProfileFieldPlotTable";
+import Tabs from "./1_Name/Tabs";
+import SeacrhBar from "./1_Name/SearchBar";
+import ProfileFieldPlotTable from "./1_Name/ProfileFieldPlotTable";
 
 export default function Cards() {
   let arr1 = ['Profile', 'Position'];

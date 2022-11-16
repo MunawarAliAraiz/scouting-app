@@ -41,12 +41,12 @@ export default function Navbar() {
                         Metric
                     </MDBNavbarItem>
                 </Link>
-                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/" role={"button"}>
+                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/createTeamPage" role={"button"}>
                     <MDBNavbarItem>
                         Create Team
                     </MDBNavbarItem>
                 </Link>
-                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/" role={"button"}>
+                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/playerMarketPage" role={"button"}>
                     <MDBNavbarItem>
                         Player Market
                     </MDBNavbarItem>
@@ -56,17 +56,17 @@ export default function Navbar() {
                         Player Comparison
                     </MDBNavbarItem>
                 </Link>
-                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/" role={"button"}>
+                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/similarPlayerPage" role={"button"}>
                     <MDBNavbarItem>
                         Similar Player
                     </MDBNavbarItem>
                 </Link>
-                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/" role={"button"}>
+                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/gkSeacrhPage" role={"button"}>
                     <MDBNavbarItem>
                         GK Search
                     </MDBNavbarItem>
                 </Link>
-                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/" role={"button"}>
+                <Link className="link-btn py-2 mx-0 my-0 px-4" to="/guidePage" role={"button"}>
                     <MDBNavbarItem>
                         Guide
                     </MDBNavbarItem>

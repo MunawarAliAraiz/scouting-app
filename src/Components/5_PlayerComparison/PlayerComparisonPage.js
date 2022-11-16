@@ -11,7 +11,7 @@ import {
     from 'mdb-react-ui-kit';
 import { useState } from 'react';
 import Api from '../Api';
-import AutoComplete from '../Name/Autocomplete';
+import AutoComplete from '../1_Name/Autocomplete';
 
 export default function PlayerComparisonPage() {
 
@@ -58,6 +58,7 @@ export default function PlayerComparisonPage() {
         const value = 'value';
         setCounts(count+1);
         setCards([...cards, {[name]: count, [value]: true, data: values}]);
+        setValues('');
       };
 
     
@@ -66,7 +67,7 @@ export default function PlayerComparisonPage() {
     <Navbar/>
     <MDBRow>
         {cards.map((item,index) => {
-            let clr = item.data.x_gdar <= 0 ? 'red':'green';
+            let clr = item.data ? item.data.x_gdar <= 0 ? 'red':'green' : 'black';
             return item.value === true ? (
                 
             <MDBCol key={index} xxl='4' lg='6' sm='12'>
@@ -101,41 +102,41 @@ export default function PlayerComparisonPage() {
                     <MDBRow className='mb-3'>
                         <MDBCol>
                             <div className='text-start'>
-                            <h4>{item.data.name.split(' ')[0]}</h4>
-                            <h1>{item.data.name.split(' ').slice(-1)[0]}</h1>
+                            <h4>{item.data.name  ? item.data.name.split(' ')[0] : '-'}</h4>
+                            <h1>{item.data.name  ? item.data.name.split(' ').slice(-1)[0] : '-'}</h1>
                             <br></br>
-                            <h4>{item.data.league}</h4>
-                            <h4>{item.data.team}</h4>
+                            <h4>{item.data.league ? item.data.league : '-'}</h4>
+                            <h4>{item.data.team ? item.data.team : '-'}</h4>
                             </div>
                         </MDBCol>
                         <MDBCol>
                             <h4>xG Impact</h4>
-                            <h1 style={{padding:'5px',backgroundColor:'white',borderRadius:'5px',display:'inline-block',color:clr}}>{item.data.x_gdar}</h1>
+                            <h1 style={{padding:'5px',backgroundColor:'white',borderRadius:'5px',display:'inline-block',color:clr}}>{item.data.x_gdar ? item.data.x_gdar : '-'}</h1>
                         </MDBCol>
                     </MDBRow>
                     <MDBRow>
-                        <MDBCol>
+                        <MDBCol xxl='3' lg='3'>
                             <div className='text-center'>
-                                <h4>{values.minutes}</h4>
-                                <h3>MINUTES</h3>
+                                <h4>{item.data.minutes ? item.data.minutes : '-'}</h4>
+                                <h5 className='fw-bold'>MINUTES</h5>
                             </div>
                         </MDBCol>
-                        <MDBCol>
+                        <MDBCol xxl='3' lg='3'>
                             <div className='text-center'>
-                                <h4>{values.link}</h4>
-                                <h3>RATING</h3>
+                                <h4>{item.data.attack_bp ? item.data.attack_bp : '-'}</h4>
+                                <h5 className='fw-bold'>RATING</h5>
                             </div>
                         </MDBCol>
-                        <MDBCol>
+                        <MDBCol xxl='3' lg='3'>
                             <div className='text-center'>
-                                <h4>{values.height}</h4>
-                                <h3>HEIGHT</h3>
+                                <h4>{item.data.height ? item.data.height : '-'}</h4>
+                                <h5 className='fw-bold'>HEIGHT</h5>
                             </div>
                         </MDBCol>
-                        <MDBCol>
+                        <MDBCol xxl='3' lg='3'>
                             <div className='text-center'>
-                                <h4>{values.weight}</h4>
-                                <h3>WEIGHT</h3>
+                                <h4>{item.data.weight ? item.data.weight : '-'}</h4>
+                                <h5 className='fw-bold'>WEIGHT</h5>
                             </div>
                         </MDBCol>
                     </MDBRow>
