@@ -46,7 +46,7 @@ export default function Tabs(props) {
       <MDBTabsContent>
         {props.data.map((item, index) => (
           <MDBTabsPane show={basicActive === `tab${index + 1}`}>
-            <>{props.content[index]}</>
+            <div className="p-5">{props.content[index]}</div>
           </MDBTabsPane>
         ))}
       </MDBTabsContent>
